@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      .search{
+        height: 40px;
+        width: 90%;
+        border-radius: 60px;
+        outline: none;
+        margin-right: -35px;
+        border: 2px solid red;
+    }
+    .btn0{
+      height: 40px;
+      width: 40%;
+      outline: none; border: none; background:red; color: white; font-weight: 700;border-radius: 60px;}
+      .btn1{height: 45px; width: 35%; border: none; outline: none; background-color: red; color: white; font-weight: 700; border-radius: 60px;}
+      .btn1:hover{background-color: rgb(174, 10, 10); transition: 0.5s;}
+      .img-fluid{
+        width: 250px;
+        height: 20vh;
+      }
+      .imge-fluid{
+        width: 200px;
+        height: 30vh;
+      }
+      .card:hover{box-shadow: -2px -1px 37px -4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -2px -1px 37px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px -1px 37px -4px rgba(0,0,0,0.75);
+        transition: 0.5s;}  </style>
+  {% block title %}
+    <title>dummy</title>
+  {% endblock %}
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://trackings.in/wp-content/uploads/2024/04/Meesho-Orders-Delivery-Tracking.webp" alt="" width="100px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><b><i class="bi bi-house-door-fill"></i>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><b><i class="bi bi-bookmark-fill"></i>CATEGORY</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><b><i class="bi bi-bag-heart-fill"></i>SHOP</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><b><i class="bi bi-link-45deg"></i>LINK</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'app1:dress' %}"><b><i class="bi bi-person-standing-dress"></i>DRESS</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'app1:perfume' %}"><b>PERFUME</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'app2:shoe' %}"><b>SHOE</b></a>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'app2:watch' %}"><b><i class="bi bi-watch"></i>WATCH</b></a>
+              </li>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control px-2 search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success btn0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+     <!--Navbar-->
+     <!-- Body-->
+      {% block body_block %}
+     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/f0fb/d7e6/4c15/38e5/9b2c/fd68/30c9/f910/5f87/de2a/de2a.jpg" class="d-block w-100" height="600px" width="400px" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/1344/418d/04c0/88c4/6950/f3e5/6972/e054/4e08/f126/f126.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://mediabrief.com/wp-content/uploads/2024/09/IMAGE-meesho-mega-blockbuster-sale-2024-MEDIABRIEF.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <section class="new">
+      <div class="container py-4">
+        <div class="row pt-4">
+          <div class="col-lg-6 m-auto">
+            <div class="row text-center">
+               <div>
+                <img src="https://i.pinimg.com/474x/61/52/11/6152117510ac1e0c811b5578853bec2c.jpg" class="img-fluid" alt="">
+                <h1>Top Categories to choose from</h1></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container py-5">
+        <div class="row py-5">
+        </div>
+        <div class="row">
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-purple-zariwork-rawsilk-designer-salwar-suit-ssrm0032974_purple_1_3_d1e819d4-944c-41c2-acd9-13fe3bc0add8_large.jpg?v=1710247059" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>SUITS</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>400.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://fcity.in/images/products/313366591/bgij0_512.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h6>TOPS</h6>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>180.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://www.crimsouneclub.com/cdn/shop/files/4_3e03defb-f7e9-44bb-ba11-8f4efad150d9_1080x.jpg?v=1739963651" class="imge-fluid" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h6>JEANS</h6>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>399.99</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://m.media-amazon.com/images/I/91nELxYQ4nL._AC_UY1100_.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h6>PLAZOO</h6>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>299.99</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://www.beyoung.in/blog/wp-content/uploads/2019/04/plain-tee3-compressed-706x1024.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>SHIRT</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>499.99</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://m.media-amazon.com/images/I/81MyRSXsbsL._AC_UY1100_.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>STYLISH JEANS</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>600.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://campussutra.com/cdn/shop/products/AWIN21_HHH_M_PLN_BLGR_F.webp?v=1661863853" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>HOODIE</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>350.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Cwr0sMTj7ws5bzHNJ9vF3lj6Wl7Ct8a1IA&s" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>TURTLENECK</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>400.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/27968960/2024/3/1/bbca612d-f90b-4f3f-ab4a-4538c135449e1709276616885GirlsShortSleeveTopWithDenimTopDenimTrousers1.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>JEANS & TOP</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>400.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://img.ltwebstatic.com/images3_pi/2020/12/28/1609126507c23633796e0322f257f8670abdba2b97_thumbnail_600x.webp" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>JUMPSUIT</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>400.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://fcity.in/images/products/343429849/mnt4p_512.jpg" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>SWEAT SHIRT</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>300.00</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <div class="card border-0 bg-light mb-2">
+              <div class="card-body">
+                <img src="https://stanwellskids.in/cdn/shop/files/ReddishMeroonShadeHeavyHandworkPartywearWeddingFrock_Stanwellskids_1.jpg?v=1736849691&width=1080" class="imge-fluid" alt="">
+              </div>
+            </div>
+            <h5>FROCK</h5>
+            <td><span><i class="bi bi-dash-circle-fill"></i></span><span>1</span><span><i class="bi bi-plus-circle-fill"></i></span></td>
+            <p><i class="bi bi-currency-rupee"></i>250.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 text-center m-auto">
+            <button class="btn1">Click For More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+    <!-- Body-->
+     <!--footer-->
+     <footer class="bg-black text-primary pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-3 text-white">
+            <h5>About</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-primary">Contact Us</a></li>
+              <li><a href="#" class="text-primary">About Us</a></li>
+              <li><a href="#" class="text-primary">Careers</a></li>
+              <li><a href="#" class="text-primary">Meesho Stories</a></li>
+            </ul>
+          </div>
+    
+          <!-- Help Section -->
+          <div class="col-md-3 text-white ">
+            <h5>Help</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-primary">Payments</a></li>
+              <li><a href="#" class="text-primary">Shipping</a></li>
+              <li><a href="#" class="text-primary">Cancellation & Returns</a></li>
+              <li><a href="#" class="text-primary">FAQ</a></li>
+            </ul>
+          </div>
+    
+          <!-- Policy Section -->
+          <div class="col-md-3 text-white ">
+            <h5>Consumer Policy</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-primary">Return Policy</a></li>
+              <li><a href="#" class="text-primary">Terms of Use</a></li>
+              <li><a href="#" class="text-primary">Security</a></li>
+              <li><a href="#" class="text-primary">Privacy</a></li>
+            </ul>
+          </div>
+    
+          <!-- Social & Payment Section -->
+          <div class="col-md-3">
+            <h5 class="text-white">Connect with Us</h5>
+            <a href="#" class="text-text-primary me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-primaryme-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+    
+            <h5 class="mt-3 text-white">Payment Methods</h5>
+            <div>
+              <i class="fab fa-cc-visa fa-2x"></i>
+              <i class="fab fa-cc-mastercard fa-2x"></i>
+              <i class="fab fa-cc-amex fa-2x"></i>
+              <i class="fab fa-cc-paypal fa-2x"></i>
+              <i class="fab fa-cc-stripe fa-2x"></i>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Bottom Footer -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="text-secondary mb-0">&copy; 2025 Meesho Clone. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
